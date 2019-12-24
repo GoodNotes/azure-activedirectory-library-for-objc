@@ -21,7 +21,10 @@
 @interface ADAuthenticationViewController : UIViewController
 
 @property (weak, nonatomic)   id<ADAuthenticationDelegate>     delegate;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 @property (weak, nonatomic)   IBOutlet UIWebView               *webView;
+#pragma clang diagnostic pop
 @property (weak, nonatomic)   IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)onCancel:(id)sender;

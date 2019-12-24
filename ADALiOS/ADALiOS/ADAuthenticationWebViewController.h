@@ -19,8 +19,10 @@
 @interface ADAuthenticationWebViewController : NSObject <UIWebViewDelegate, NSURLConnectionDelegate>
 
 @property (weak, nonatomic) id<ADAuthenticationDelegate> delegate;
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (id)initWithWebView:(UIWebView *)webView startAtURL:(NSURL *)startURL endAtURL:(NSURL *)endURL;
+#pragma clang diagnostic pop
 - (void)start;
 - (void)stop;
 - (void) handlePKeyAuthChallenge:(NSString *)challengeUrl;

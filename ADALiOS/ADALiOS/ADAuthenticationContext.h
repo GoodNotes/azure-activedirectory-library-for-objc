@@ -27,7 +27,10 @@
 #if TARGET_OS_IPHONE
 //iOS:
 #   include <UIKit/UIKit.h>
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 typedef UIWebView WebViewType;
+#pragma clang diagnostic pop
 #else
 //OS X:
 #   include <WebKit/WebKit.h>
